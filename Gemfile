@@ -8,8 +8,16 @@ end
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.0.1'
+#Added By ME
+ruby '2.4.0'
+group :production do 
+  gem "rails_12factor"
+  gem "pg"
+end
 # Use sqlite3 as the database for Active Record
+group :development, :test do #Added By ME
 gem 'sqlite3'
+end
 # Use Puma as the app server
 gem 'puma', '~> 3.0'
 # Use SCSS for stylesheets
